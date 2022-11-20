@@ -1074,7 +1074,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>Плейер</string>
+     <string>Плеер</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">

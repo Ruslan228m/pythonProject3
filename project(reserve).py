@@ -40,7 +40,7 @@ class MyWidget(QMainWindow):
         self.instrument_number = {'Пианино': 'pianino',
                                   'Саксофон': 'Alto sax', 'Колокола': 'Ball'}
 
-        # Первая актава
+        # Первая октава
         self.pBtn_C.clicked.connect(self.C)
         self.pBtn_Cd.clicked.connect(self.Cd)
         self.pBtn_D.clicked.connect(self.D)
@@ -53,7 +53,7 @@ class MyWidget(QMainWindow):
         self.pBtn_A.clicked.connect(self.A)
         self.pBtn_Ad.clicked.connect(self.Ad)
         self.pBtn_B.clicked.connect(self.B)
-        # Вторая актава
+        # Вторая октава
         self.pBtn_C2.clicked.connect(self.C2)
         self.pBtn_Cd2.clicked.connect(self.Cd2)
         self.pBtn_D2.clicked.connect(self.D2)
@@ -70,7 +70,7 @@ class MyWidget(QMainWindow):
         self.player = QMediaPlayer()  # Создание плеера
 
     def keyPressEvent(self, event):
-        # Первая актава
+        # Первая октава
         if event.key() == Qt.Key_Q:
             url = QUrl.fromLocalFile(
                 os.path.join(os.getcwd(), f'piano sounds/{self.instrument_number[self.instrument]}/nots-do.wav'))
@@ -206,7 +206,7 @@ class MyWidget(QMainWindow):
         if event.key() == Qt.Key_P:
             self.s.play(f'drum/open_hat.wav')
 
-    # Первая актава
+    # Первая октава
     def C(self):
         url = QUrl.fromLocalFile(
             os.path.join(os.getcwd(), f'piano sounds/{self.instrument_number[self.instrument]}/nots-do.wav'))
@@ -279,7 +279,7 @@ class MyWidget(QMainWindow):
         self.player.setMedia(QMediaContent(url))
         self.player.play()
 
-    # Вторая актава
+    # Вторая октава
     def C2(self):
         url = QUrl.fromLocalFile(
             os.path.join(os.getcwd(), f'piano sounds/{self.instrument_number[self.instrument]}/nots-do2.wav'))
