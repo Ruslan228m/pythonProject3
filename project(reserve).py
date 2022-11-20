@@ -438,7 +438,7 @@ class Window2(QMainWindow):
             wf.setframerate(RATE)
             wf.writeframes(b''.join(frames))
             wf.close()
-            self.label_4.setText("Запись завершина")
+            self.label_4.setText("Запись завершена")
 
 
 class Window3(QMainWindow):
